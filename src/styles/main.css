@@ -142,6 +142,7 @@
     margin-bottom: 2em;   
     
   }
+  
 
   .hero_inner {
       margin: 0 auto;
@@ -210,18 +211,18 @@
     padding: 16px;
   }
    
-  .restaurant-item .restaurant-item-content h3 {
+  .restaurant-item .restaurant-item__content h3 {
     margin: 0 0 10px 0;
     text-align: center;
   }
    
-  .restaurant-item .restaurant-item-content a {
+  .restaurant-item .restaurant-item__content a {
     color: #000000;
     width: 120px;
     height: 44px;
   }
    
-  .restaurant-item .restaurant-item-content p {
+  .restaurant-item .restaurant-item__content p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

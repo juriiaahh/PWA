@@ -32,19 +32,24 @@
         grid-template-columns: 1fr 1fr;
     }
    
+   
+    .restaurants {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .restaurant {
         grid-template-columns: auto 1fr;
     }
-   
-    .restaurant .restaurant-title {
+
+    .restaurant .restaurant__title {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-   
-    .restaurant .restaurant-overview {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
+
+  .restaurant .restaurant__body {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
   }
    
   @media screen and (min-width: 800px) {

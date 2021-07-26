@@ -1,16 +1,16 @@
-import FavoriteRestaurantIdb from '../src/scripts/data/favorite-restaurant-db';
+import FavoriteRestaurant from '../src/scripts/data/favorite-restaurant-db';
 import * as TestFactories from './helpers/testFactories';
 
 const addLikeButtonContainer = () => {
-    document.body.innerHTML = '<div id="likeButtonContainer"></div>';
-  };
+  document.body.innerHTML = '<div id="likeButtonContainer"></div>';
+};
 
-describe('Liking A Restaurant', () => {
-    beforeEach(() => {
-        addLikeButtonContainer();
-});
+describe('Liking A restaurant', () => {
+  beforeEach(() => {
+    addLikeButtonContainer();
+  });
 
-it('should show the like button when the restaurant has not been liked before', async () => {
+  it('should show the like button when the restaurant has not been liked before', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     expect(
@@ -30,26 +30,26 @@ it('should show the like button when the restaurant has not been liked before', 
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-    const restaurant = await FavoriteRestaurantIdb.getRestaurant(1);
+    const restaurant = await FavoriteRestaurant.getRestaurant(1);
 
     expect(restaurant).toEqual({ id: 1 });
 
-    FavoriteRestaurantIdb.deleteRestaurant(1);
+    FavoriteRestaurant.deleteRestaurant(1);
   });
 
   it('should not add a restaurant again when its already liked', async () => {
     await TestFactories.createLikeButtonPresenterWithRestaurant({ id: 1 });
 
     // Tambahkan film dengan ID 1 ke daftar film yang disukai
-    await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
+    await FavoriteRestaurant.putRestaurant({ id: 1 });
 
     // Simulasikan pengguna menekan tombol suka film
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
     // tidak ada film yang ganda
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([{ id: 1 }]);
+    expect(await FavoriteRestaurant.getAllRestaurants()).toEqual([{ id: 1 }]);
 
-    FavoriteRestaurantIdb.deleteRestaurant(1);
+    FavoriteRestaurant.deleteRestaurant(1);
   });
 
   // menggunakan metode xit, bukan it untuk menonaktivkan
@@ -58,6 +58,7 @@ it('should show the like button when the restaurant has not been liked before', 
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurants()).toEqual([]);
+    expect(await FavoriteRestaurant.getAllRestaurants()).toEqual([]);
   });
 });
+

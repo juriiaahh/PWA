@@ -1,6 +1,6 @@
-import FavoriteRestaurantIdb from '../src/scripts/data/favorite-restaurant-db';
-import FavoriteRestaurantShowPresenter from '../src/scripts/views/pages/liked-restaurants/favorite-restaurant-show-presenter';
-import FavoriteRestaurantSearchView from '../src/scripts/views/pages/liked-restaurants/favorite-restaurant-search-view';
+import FavoriteRestaurant from '../src/scripts/data/favorite-restaurant-db';
+import FavoriteRestaurantShowPresenter from '../src/scripts/views/pages/liked-restaurant/favorite-restaurant-show-presenter';
+import FavoriteRestaurantSearchView from '../src/scripts/views/pages/liked-restaurant/favorite-restaurant-search-view';
 
 describe('Showing all favorite restaurants', () => {
   let view;
@@ -16,14 +16,14 @@ describe('Showing all favorite restaurants', () => {
 
   describe('When no restaurants have been liked', () => {
     it('should ask for the favorite restaurants', () => {
-      const FavoriteRestaurantIdb = spyOnAllFunctions(FavoriteRestaurant);
+      const favoriteRestaurants = spyOnAllFunctions(FavoriteRestaurant);
 
       new FavoriteRestaurantShowPresenter({
         view,
-        FavoriteRestaurantIdb,
+        favoriteRestaurants,
       });
 
-      expect(FavoriteRestaurantIdb.getAllRestaurants).toHaveBeenCalledTimes(1);
+      expect(favoriteRestaurants.getAllRestaurants).toHaveBeenCalledTimes(1);
     });
 
     it('should show the information that no restaurants have been liked', (done) => {
@@ -37,12 +37,12 @@ describe('Showing all favorite restaurants', () => {
           done();
         });
 
-      const FavoriteRestaurantIdb = spyOnAllFunctions(FavoriteRestaurant);
-      FavoriteRestaurantIdb.getAllRestaurants.and.returnValues([]);
+      const favoriteRestaurants = spyOnAllFunctions(FavoriteRestaurant);
+      favoriteRestaurants.getAllRestaurants.and.returnValues([]);
 
       new FavoriteRestaurantShowPresenter({
         view,
-        FavoriteRestaurantIdb,
+        favoriteRestaurants,
       });
     });
   });
@@ -58,8 +58,8 @@ describe('Showing all favorite restaurants', () => {
           done();
         });
 
-      const FavoriteRestaurantIdb = spyOnAllFunctions(FavoriteRestaurant);
-      FavoriteRestaurantIdb.getAllRestaurants.and.returnValues([
+      const favoriteRestaurants = spyOnAllFunctions(FavoriteRestaurant);
+      favoriteRestaurants.getAllRestaurants.and.returnValues([
         {
           id: 11,
           name: 'A',
@@ -76,7 +76,7 @@ describe('Showing all favorite restaurants', () => {
 
       new FavoriteRestaurantShowPresenter({
         view,
-        FavoriteRestaurantIdb,
+        favoriteRestaurants,
       });
     });
   });

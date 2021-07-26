@@ -5,9 +5,9 @@
 
 
 const createRestaurantDetailTemplate = (restaurant) => `
-<h2 class="restaurant-title">${restaurant.name}</h2>
+<h2 class="restaurant__title">${restaurant.name}</h2>
 <img class="restaurant__poster lazyload" data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name}" />
-<div class="restaurant-info">
+<div class="restaurant__info">
 <h3>Information</h3>
   <h4>Kota</h4>
   <p>${restaurant.city}</p>
@@ -52,16 +52,16 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item">
-    <div class="restaurant-item-header">
-        <img class="restaurant-item-header-poster lazyload" alt="${restaurant.name}"
+    <div class="restaurant-item__header">
+        <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}"
             src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}">
   
-        <div class="restaurant-item-header-rating">
-            <p>⭐️<span class="restaurant-item-header-rating-score">${restaurant.rating}</span></p>
+        <div class="restaurant-item__header__rating">
+            <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
         </div>
     </div>
-    <div class="restaurant-item-content">
-        <h1><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h1>
+    <div class="restaurant-item__content">
+        <h1 class="restaurant__title"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h1>
         <p>${restaurant.description}</p>
     </div>
     </div>
