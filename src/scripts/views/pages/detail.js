@@ -1,4 +1,7 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable object-shorthand */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
 // eslint-disable-next-line linebreak-style
 import UrlParser from '../../routes/url-parser';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';

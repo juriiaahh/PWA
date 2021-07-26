@@ -1,11 +1,9 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/no-unresolved
-// eslint-disable-next-line linebreak-style
-// eslint-disable-next-line import/no-unresolved
-// eslint-disable-next-line linebreak-style
+/* eslint-disable no-prototype-builtins */
+/* eslint-disable consistent-return */
+/* eslint-disable linebreak-style */
+/* eslint-disable linebreak-style */
 import { openDB } from 'idb';
-// eslint-disable-next-line linebreak-style
 import CONFIG from '../globals/config';
 
 const { DATABASE_NAME, DATABASE_VERSION, OBJECT_STORE_NAME } = CONFIG;
@@ -17,7 +15,6 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 });
 
 const FavoriteRestaurantIdb = {
-  // eslint-disable-next-line padded-blocks
   async getRestaurant(id) {
     if (!id) {
       return;

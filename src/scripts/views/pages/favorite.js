@@ -1,10 +1,10 @@
 /* eslint-disable linebreak-style */
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+/* eslint-disable no-new */
+/* eslint-disable linebreak-style */
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-db';
 import FavoriteRestaurantSearchView from './liked-restaurant/favorite-restaurant-search-view';
 import FavoriteRestaurantShowPresenter from './liked-restaurant/favorite-restaurant-show-presenter';
 import FavoriteRestaurantSearchPresenter from './liked-restaurant/favorite-restaurant-search-presenter';
-
 
 const view = new FavoriteRestaurantSearchView();
 

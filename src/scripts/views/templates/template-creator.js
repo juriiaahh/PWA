@@ -3,7 +3,6 @@
 /* eslint-disable linebreak-style */
 // eslint-disable-next-line linebreak-style
 
-
 const createRestaurantDetailTemplate = (restaurant) => `
 <h2 class="restaurant__title">${restaurant.name}</h2>
 <img class="restaurant__poster lazyload" data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" alt="${restaurant.name}" />
@@ -53,8 +52,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item">
     <div class="restaurant-item__header">
-        <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}"
-            src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}">
+        <img data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" class="restaurant-item__header__poster lazyload" alt="${restaurant.name}">
   
         <div class="restaurant-item__header__rating">
             <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>

@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-underscore-dangle */
 class FavoriteRestaurantShowPresenter {
   constructor({ view, favoriteRestaurants }) {
     this._view = view;

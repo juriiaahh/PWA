@@ -1,3 +1,7 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable linebreak-style */
+/* eslint-disable class-methods-use-this */
 import { createRestaurantItemTemplate } from '../../templates/template-creator';
 
 class FavoriteRestaurantSearchView {

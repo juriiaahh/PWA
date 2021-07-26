@@ -1,3 +1,9 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-underscore-dangle */
 class FavoriteRestaurantSearchPresenter {
     constructor({ favoriteRestaurants, view }) {
       this._view = view;
@@ -16,6 +22,7 @@ class FavoriteRestaurantSearchPresenter {
   
       let foundRestaurants;
       if (this.latestQuery.length > 0) {
+        // eslint-disable-next-line indent
         foundRestaurants = await this._favoriteRestaurants.searchRestaurants(
           this.latestQuery,
         );
@@ -35,5 +42,5 @@ class FavoriteRestaurantSearchPresenter {
     }
   }
   
+  // eslint-disable-next-line eol-last
   export default FavoriteRestaurantSearchPresenter;
-  

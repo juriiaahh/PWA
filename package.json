@@ -7,9 +7,9 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "juriah",
@@ -21,7 +21,7 @@
     "codeceptjs": "^3.0.7",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^3.6.0",
-    "eslint": "^7.28.0",
+    "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.23.4",
     "html-webpack-plugin": "^4.3.0",
