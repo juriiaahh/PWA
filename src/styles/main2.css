@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html, main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+@media screen and (max-width: 599px) {
+    .header_title {
+        display: none;
+    }
+
+    #hamburger {
+        font-size: 44px;
+        text-decoration: none;
+        color: black;
+        margin: 10px auto;
+        display: block;
+        min-width: 44px;
+        min-height: 44px;
+        text-align: center;
+    }
+
+    #drawer {
+        width: 250px;
+        height: 100%;
+        position: absolute;
+        transform: translate(-250px, 0);
+        transition: transform 0.3s ease-in-out;
+        background-color:#111;
+    }
+
+    #drawer.open {
+        transform: translate(0,0)
+    }
+
+    main {
+        padding: 16px;
+       }
+        
+        
+    #drawer ul {
+        list-style-type: none;
+        padding: 0 16px;
+    }
+        
+        
+    #drawer li {
+        padding: 5px 0px;
+    }
+        
+        
+    #drawer a {
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+    }
+
+    #city {
+        margin-top: -150px;
+    }
+
+}
+
+@media screen and (min-width: 600px) {
+    #hamburger {
+        display: none;
+    }
+
+    .header {
+        min-height: 56px;
+        transition: min-height 0.3s;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .header_inner {
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .header_title {
+        font-weight: 600;
+        font-size: 4em;
+        margin: 0.15em 0.25em;
+        display: inline-block;
+        color: #212121;
+    }
+
+    .nav {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .nav_list {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .nav_item {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 24%;
+        font-size: 1.25em;
+        font-weight: 600;
+        text-align: center;
+        line-height: 24px;
+        padding: 24px;
+        text-transform: uppercase;
+    }
+    
+    .nav a {
+        text-decoration: none;
+        color: #000;
+        padding: 1.3em;
+    }
+    
+    .nav a:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    #city {
+        margin-top: -150px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    #restaurant-list {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+
+    #city {
+        margin-top: -150px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    #restaurant-list {
+        grid-row-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    height: max-content;
+}
+
+#content {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.content-title {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    margin: 25px auto;
+}
+
+
+#restaurant-list {
+    margin: 32px auto auto;
+    display: grid;
+    grid-row-gap: 16px;
+    width: 100%;
+}
+
+.restaurant-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.restaurant-item-image {
+    position: relative;
+}
+
+#city {
+    position: absolute;
+    padding: 1%;
+    background-color: yellow;
+    font-size: 1.25em;
+    font-weight: 500;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+}
+
+.restaurant-item-thumbmail {
+    width: 100%;
+    position: relative;
+}
+
+
+.restaurant-item-content {
+    text-align: left;
+    padding: 15px;
+}
+
+.restaurant-name {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+    margin-bottom: 16px;
+}
+
+.description {
+    margin-top: 16px;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-overflow: ellipsis;
+}
+
+.footer {
+    background-color: #2c3e50;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-title {
+    color: #fff;
+}
