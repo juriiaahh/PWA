@@ -1,3 +1,8 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable indent */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable linebreak-style */
+/* eslint-disable import/no-extraneous-dependencies */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
@@ -7,7 +12,7 @@ const path = require('path');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
- 
+
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
@@ -29,15 +34,16 @@ module.exports = {
       cacheGroups: {
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
+          priority: -10,
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
+          reuseExistingChunk: true,
+        },
+      },
+    },
+   // eslint-disable-next-line indent
    },
   module: {
     rules: [
@@ -60,7 +66,6 @@ module.exports = {
       filename: 'index.html',
     }),
     new BundleAnalyzerPlugin(),
-   
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -88,11 +93,11 @@ module.exports = {
         {
           test: /\.(jpe?g|png)/,
           options: {
-            quality: 50
-          }
-        }
+            quality: 50,
+          },
+        },
       ],
       overrideExtension: true,
-    })
+    }),
   ],
 };

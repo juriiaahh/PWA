@@ -79,7 +79,7 @@
   
   @media screen and (max-width: 600px) {
     .hero {
-      background-image: url('/images/heros/hero-image_4.jpg');
+      background-image: url('/images/heros/hero-image_4-small.jpg');
     }
     
   }

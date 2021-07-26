@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 // Karma configuration
 // Generated on Fri Jul 03 2020 20:15:52 GMT+0700 (Western Indonesia Time)
 module.exports = function (config) {

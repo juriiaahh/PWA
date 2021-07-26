@@ -1,3 +1,5 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable import/no-extraneous-dependencies */
 const { setHeadlessWhen } = require('@codeceptjs/configure');
 
 // turn on headless mode when running with HEADLESS=true environment variable
@@ -32,4 +34,4 @@ exports.config = {
       enabled: true
     }
   }
-}
+};
