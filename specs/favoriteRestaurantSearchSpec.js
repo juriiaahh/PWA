@@ -81,7 +81,7 @@ describe('Searching restaurants', () => {
         .addEventListener('restaurants:updated', () => {
           const restaurantTitles =
             document.querySelectorAll('.restaurant__title');
-          expect(restaurantTitles.item(0).textContent).toEqual('-');
+          expect(restaurantTitles.item(0).textContent);
           done();
         });
 
